@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
  
 setup (
     name='django-zipdistance',
-    version='0.1',
+    version='0.2',
     description='A zip code distance application for Django.',
     author='Elf M. Sternberg',
     author_email='elf.sternberg@gmail.com',
@@ -19,6 +19,7 @@ setup (
         'Programming Language :: Python',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
+    install_requires = ['django-classy-tags',],
     package_data = {
         '': ['*.yaml.gz']
         },

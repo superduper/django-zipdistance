@@ -28,6 +28,18 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 -----------------------------
+
+Setup: 
+
+1. Add to ```zipdistance``` to ```INSTALLED_APPS`` at ```settings.py```
+2. Do load zipcodes with ```python manage.py syncdb```
+
+
+Template tag usage example: 
+
+    {% load zipdistance %}
+    Distance is: {% distance user.profile.zipcode to mall.zipcode %} miles
+
 Standard Usage:
 
 Find all the zipcodes within 50 miles:

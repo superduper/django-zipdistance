@@ -45,6 +45,15 @@ class DistanceFrom(Aggregate):
 class ZipDistanceManager(models.Manager):
 
     def distance_from(self, target, limit = 0):
+        from django.conf import settings
+        if settings.DATABASES['default']['ENGINE'] == 'django.db.backends.sqlite3':
+            import math
+            from django.db import connection
+            connection.connection.create_function('acos', 1, math.acos)
+            connection.connection.create_function('cos', 1, math.cos)
+            connection.connection.create_function('radians', 1, math.radians)
+            connection.connection.create_function('sin', 1, math.sin)
+
         qs = self.annotate(distance = DistanceFrom('zipcode', target = target))
         if bool(limit):
             qs = qs.filter(distance__lte = float(limit))

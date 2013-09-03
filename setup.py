@@ -21,7 +21,7 @@ setup (
     ],
     install_requires = ['django-classy-tags',],
     package_data = {
-        '': ['*.yaml.gz']
+        '': ['*.json']
         },
     packages=find_packages(),
 )

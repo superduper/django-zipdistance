@@ -8,7 +8,7 @@ def load_zip_codes(sender, **kwargs):
         print "Skipping: zipdistance fixture load"
     else:
         print "Executing: zipdistance fixture load"
-        call_command('loaddata', 'zipcodes')
+        call_command('loaddata', 'zipcodes.json')
 
 try: 
 	from django.db.models.signals import post_migrate

@@ -31,7 +31,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 Setup: 
 
-1. Add to ```zipdistance``` to ```INSTALLED_APPS`` at ```settings.py```
+1. Add to ```zipdistance``` to ```INSTALLED_APPS``` at ```settings.py```
 2. Do load zipcodes with ```python manage.py syncdb```
 
 

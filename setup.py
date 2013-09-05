@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
  
 setup (
     name='django-zipdistance',
-    version='0.2.3',
+    version='0.2.4',
     description='A zip code distance application for Django.',
     author='Elf M. Sternberg',
     author_email='elf.sternberg@gmail.com',
